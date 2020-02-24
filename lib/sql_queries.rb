@@ -14,6 +14,8 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
   "SELECT users.name, pledges.amount FROM pledges LEFT JOIN users ON users.id = pledges.user_id GROUP BY users.name ORDER BY pledges.amount;"
 end
 
+#this one's the bitch 
+
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
   "SELECT projects.category, pledges.amount FROM pledges INNER JOIN projects ON pledges.project_id = projects.id WHERE projects.category = 'music';"
 end
